@@ -62,7 +62,7 @@ window.pendo_options = {
       apiKey: 'c5885daf-ff86-424b-4565-3138083e949b'
 
 {/literal}
-{if !$AUTHENTICATED }
+{if $AUTHENTICATED }
 {literal}
       ,visitor: {  
         id: {/literal}{$CURRENT_USER_ID}{literal},
