@@ -65,8 +65,8 @@ window.pendo_options = {
 {if $AUTHENTICATED }
 {literal}
       ,visitor: {  
-        id: {/literal}{$CURRENT_USER_ID}{literal},
-        name: {/literal}{$CURRENT_USER}{literal}
+        id: '{/literal}{$CURRENT_USER_ID}{literal}',
+        name: '{/literal}{$CURRENT_USER}{literal}'
       },
       account: {
         name: 'Test'
