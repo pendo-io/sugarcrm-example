@@ -57,6 +57,33 @@ if ( YAHOO.env.ua )
     UA = YAHOO.env.ua;
 -->
 </script>
+<script type="text/javascript">
+window.pendo_options = {
+      apiKey: 'c5885daf-ff86-424b-4565-3138083e949b',
+
+{/literal}
+{if !$AUTHENTICATED }
+{literal}
+      visitor: {  
+        id: {/literal}{$CURRENT_USER_ID}{literal},
+        name: {/literal}{$CURRENT_USER}{literal}
+      },
+      account: {
+        name: 'Test'
+      }
+};
+{/literal}
+{/if}
+{literal}
+(function() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = ('https:' === document.location.protocol ? 'https://' : 'http://' ) + 's3.amazonaws.com/pendo_static/js/dev-pa.js';
+      var firstScript = document.getElementsByTagName('script')[0];
+      firstScript.parentNode.insertBefore(script, firstScript);
+})();
+ </script>
 {/literal}
 <script type="text/javascript" src='{sugar_getjspath file="cache/include/javascript/sugar_field_grp.js"}'></script>
 </head>
