@@ -59,22 +59,22 @@ if ( YAHOO.env.ua )
 </script>
 <script type="text/javascript">
 window.pendo_options = {
-      apiKey: 'c5885daf-ff86-424b-4565-3138083e949b',
+      apiKey: 'c5885daf-ff86-424b-4565-3138083e949b'
 
 {/literal}
 {if !$AUTHENTICATED }
 {literal}
-      visitor: {  
+      ,visitor: {  
         id: {/literal}{$CURRENT_USER_ID}{literal},
         name: {/literal}{$CURRENT_USER}{literal}
       },
       account: {
         name: 'Test'
       }
-};
 {/literal}
 {/if}
 {literal}
+};
 (function() {
       var script = document.createElement('script');
       script.type = 'text/javascript';
